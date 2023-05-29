@@ -21,7 +21,6 @@ export const getName = createAsyncThunk(
 
 const initialState = {
     countryList: [],
-    countryKeys: [],
     isLoading: true,
     error: undefined,
 }
@@ -36,7 +35,20 @@ const mainSlice = createSlice({
             state.isLoading = true
         })
         .addCase(getName.fulfilled, (state, action) =>{
-           return console.log(action.payload)
+           console.log(action.payload)
+           const everyC = []
+           action.payload.map((item) => {
+            const country = {
+                country: item.Country.EnglishName,
+                city: item.LocalizedName,
+                Key: item.Key
+           }
+        
+           return everyC.push(country)
+           })
+           
+            state.countryList = everyC
+            console.log(state.countryList)
         })
         .addCase(getName.rejected, (state, action) => {
             state.isLoading = false;
