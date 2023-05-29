@@ -1,12 +1,14 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Mainpage from './components/mainpage';
+import MainPage from './components/mainpage';
+import Details from './components/Details';
 
 function App() {
   return (
-    <div>
-      <Mainpage/>
-    </div>
+    <Routes>
+      <Route path='/' element={<MainPage/>} />
+      <Route path='/Details' element={<Details/>}/>
+    </Routes>
   );
 }
 

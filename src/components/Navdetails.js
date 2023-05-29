@@ -1,4 +1,4 @@
-const Nav = () => {
+const NavDetails = () => {
     return<>
     <ul>
         <li>Home</li>
@@ -8,4 +8,4 @@ const Nav = () => {
     </>
 }
 
-export default Nav
+export default NavDetails
