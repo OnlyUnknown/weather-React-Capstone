@@ -4,35 +4,37 @@ import { getName } from '../Redux/Slices/mainpageSlice';
 import Nav from './Nav';
 
 const MainPage = () => {
-    const dispatch = useDispatch();
-    const {
-        countryList,isLoading
-      } = useSelector((store) => store.main);
+  const dispatch = useDispatch();
+  const {
+    countryList, isLoading, error,
+  } = useSelector((store) => store.main);
   useEffect(() => {
-
     dispatch(getName());
-
   }, [dispatch]);
-    
-    if (isLoading === true) {
-    return <>
-    <Nav/>
-    <div>Loading</div>
-    
-    </>;
+
+  if (isLoading === true) {
+    return (
+      <>
+        <Nav />
+        <div>Loading</div>
+
+      </>
+    );
   } if (isLoading === false) {
     return (
       <div data-testid="RocketList">
-        <Nav/>
+        <Nav />
         {countryList.map((item) => (
-          <div>
-          <div>
-          {item.country}/{item.city}
-        </div>
-        <div>
-        {item.key}
-      </div>
-      </div>
+          <div key={item.key}>
+            <div>
+              {item.country}
+              /
+              {item.city}
+            </div>
+            <div>
+              {item.key}
+            </div>
+          </div>
         ))}
       </div>
     );
