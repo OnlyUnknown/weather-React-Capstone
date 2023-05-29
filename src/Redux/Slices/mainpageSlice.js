@@ -3,14 +3,15 @@ import axios from "axios"
 
 
 
-const url = "http://dataservice.accuweather.com/locations/v1/topcities/50/pFhiQ1OqX6cHW7AkQqb8k9CLpPeIL1LX"
 
-// const apiKey = "pFhiQ1OqX6cHW7AkQqb8k9CLpPeIL1LX"
+const url = "http://dataservice.accuweather.com/locations/v1/topcities/50?apikey=pFhiQ1OqX6cHW7AkQqb8k9CLpPeIL1LX"
 
-const getName = createAsyncThunk(
+
+
+export const getName = createAsyncThunk(
     "Country/FetchCountry", async () => {
         try{
-            const response = await axios.get(url);
+            const response = await axios.get(url );
             return response.data
         } catch (err) {
             return err.message
