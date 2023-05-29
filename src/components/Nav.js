@@ -1,11 +1,11 @@
-const Nav = () => {
-    return<>
+const Nav = () => (
+  <>
     <ul>
-        <li>Home</li>
-        <li>Mic</li>
-        <li>Setting</li>
+      <li>Home</li>
+      <li>Mic</li>
+      <li>Setting</li>
     </ul>
-    </>
-}
+  </>
+);
 
-export default Nav
+export default Nav;

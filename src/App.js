@@ -6,8 +6,8 @@ import Details from './components/Details';
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<MainPage/>} />
-      <Route path='/Details' element={<Details/>}/>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/Details" element={<Details />} />
     </Routes>
   );
 }
