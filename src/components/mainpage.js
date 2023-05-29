@@ -5,17 +5,39 @@ import Nav from './Nav';
 
 const MainPage = () => {
     const dispatch = useDispatch();
-
+    const {
+        countryList,isLoading
+      } = useSelector((store) => store.main);
   useEffect(() => {
 
     dispatch(getName());
 
   }, [dispatch]);
-  return<>
-    <Nav />
-    <h3>Countries</h3>
-    <h3>Country</h3>
-  </>
+    
+    if (isLoading === true) {
+    return <>
+    <Nav/>
+    <div>Loading</div>
+    
+    </>;
+  } if (isLoading === false) {
+    return (
+      <div data-testid="RocketList">
+        <Nav/>
+        {countryList.map((item) => (
+          <div>
+          <div>
+          {item.country}/{item.city}
+        </div>
+        <div>
+        {item.key}
+      </div>
+      </div>
+        ))}
+      </div>
+    );
+  }
+  return <div>{error}</div>;
 };
 
 export default MainPage;

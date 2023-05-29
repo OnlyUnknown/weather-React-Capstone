@@ -49,6 +49,7 @@ const mainSlice = createSlice({
            
             state.countryList = everyC
             console.log(state.countryList)
+            state.isLoading = false
         })
         .addCase(getName.rejected, (state, action) => {
             state.isLoading = false;
