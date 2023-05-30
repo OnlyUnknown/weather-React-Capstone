@@ -66,6 +66,30 @@ const mainSlice = createSlice({
         state.countryDetails = action.payload
         console.log(action.payload)
         console.log(state.countryDetails)
+        const Headline = {
+            Category: action.payload.Headline.Category,
+            EffectiveDate: action.payload.Headline.EffectiveDate,
+            EndDate: action.payload.Headline.EndDate,
+        };
+        let DailyForecasts = []
+         action.payload.DailyForecasts.map((item) =>{
+           let day = {};
+           day = {
+            Date: item.Date,
+            DayW: item.Day.IconPhrase,
+            NightW: item.Night.IconPhrase,
+            Temperature: {Max:
+                 {Value: item.Temperature.Maximum.Value, 
+                    Unit: item.Temperature.Maximum.Unit}, 
+            Min: {Value: item.Temperature.Minimum.Value, 
+                Unit: item.Temperature.Minimum.Unit}}
+           } 
+           DailyForecasts.push(day)
+        })
+        console.log(Headline)
+        state.countryDetails = action.payload
+        console.log(action.payload)
+        console.log(state.countryDetails)
       })
   },
 });
