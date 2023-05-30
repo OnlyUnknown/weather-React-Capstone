@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getName } from '../Redux/Slices/mainpageSlice';
+import { getDetails, getName } from '../Redux/Slices/mainpageSlice';
 import Nav from './Nav';
 
 const MainPage = () => {
@@ -10,6 +10,7 @@ const MainPage = () => {
   } = useSelector((store) => store.main);
   useEffect(() => {
     dispatch(getName());
+
   }, [dispatch]);
 
   if (isLoading === true) {
@@ -25,7 +26,7 @@ const MainPage = () => {
       <div data-testid="RocketList">
         <Nav />
         {countryList.map((item) => (
-          <div key={item.key}>
+          <div onClick={() => { dispatch(getDetails(item.key))}} key={item.key}>
             <div>
               {item.country}
               /

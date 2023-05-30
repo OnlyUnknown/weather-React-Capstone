@@ -14,8 +14,22 @@ export const getName = createAsyncThunk(
   },
 );
 
+
+export const getDetails = createAsyncThunk(
+  'Country/FetchDetails', async (key) => {
+    try {
+      const response = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=pFhiQ1OqX6cHW7AkQqb8k9CLpPeIL1LX`);
+      return response.data;
+    } catch (err) {
+      return err.message;
+    }
+  },
+);
+
+
 const initialState = {
   countryList: [],
+  countryDetails: [],
   isLoading: true,
   error: undefined,
 };
@@ -47,7 +61,12 @@ const mainSlice = createSlice({
       .addCase(getName.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
-      });
+      })
+      .addCase(getDetails.fulfilled, (state,action) => {
+        state.countryDetails = action.payload
+        console.log(action.payload)
+        console.log(state.countryDetails)
+      })
   },
 });
 
