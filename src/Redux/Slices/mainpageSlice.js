@@ -62,19 +62,23 @@ const mainSlice = createSlice({
         state.isLoading = false;
         state.error = action.error.message;
       })
+      .addCase(getDetails.pending, (state,action) => {
+        state.isLoading = true;
+      })
       .addCase(getDetails.fulfilled, (state,action) => {
         state.countryDetails = action.payload
-        console.log(action.payload)
-        console.log(state.countryDetails)
         const Headline = {
             Category: action.payload.Headline.Category,
             EffectiveDate: action.payload.Headline.EffectiveDate,
             EndDate: action.payload.Headline.EndDate,
         };
+        let num = 1
         let DailyForecasts = []
          action.payload.DailyForecasts.map((item) =>{
+            
            let day = {};
            day = {
+            Day: num,
             Date: item.Date,
             DayW: item.Day.IconPhrase,
             NightW: item.Night.IconPhrase,
@@ -84,11 +88,11 @@ const mainSlice = createSlice({
             Min: {Value: item.Temperature.Minimum.Value, 
                 Unit: item.Temperature.Minimum.Unit}}
            } 
+           num += 1
            DailyForecasts.push(day)
         })
-        console.log(Headline)
-        state.countryDetails = action.payload
-        console.log(action.payload)
+        state.countryDetails = {Headline, DailyForecasts}
+        state.isLoading = false
         console.log(state.countryDetails)
       })
   },
