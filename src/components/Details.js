@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import NavDetails from './Navdetails';
 import CloudySun from '../PNG/danieledesantis-weather-icons-cloudy.png';
 import Sunny from '../PNG/danieledesantis-weather-icons-sunny.png';
 import MostlyCloudy from '../PNG/danieledesantis-weather-icons-cloudy-3.png';
@@ -14,6 +13,15 @@ import ShowersN from '../PNG/danieledesantis-weather-icons-night-rainy-2.png';
 import ThunderStormN from '../PNG/danieledesantis-weather-icons-night-stormy.png';
 import RainN from '../PNG/danieledesantis-weather-icons-night-rainy.png';
 // eslint-disable-next-line
+const NavDetails = () => (
+  <>
+    <ul>
+      <Link to="/"><li>Home</li></Link>
+      <li>Mic</li>
+      <li>Setting</li>
+    </ul>
+  </>
+);
 const Details = () => {
   const {
     countryDetails, isLoading, countryList, KeyN,
@@ -338,5 +346,7 @@ const Details = () => {
     );
   }
 };
+
+
 
 export default Details;

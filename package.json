@@ -1,6 +1,11 @@
 {
   "name": "weather-react-capstone",
   "version": "0.1.0",
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
+  },
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
