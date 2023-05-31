@@ -16,19 +16,17 @@ export const getName = createAsyncThunk(
   },
 );
 
-
 export const getDetails = createAsyncThunk(
   'Country/FetchDetails', async (key) => {
     try {
       const response = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=pFhiQ1OqX6cHW7AkQqb8k9CLpPeIL1LX`);
-        KeyN = key
-      return response.data
+      KeyN = key;
+      return response.data;
     } catch (err) {
       return err.message;
     }
   },
 );
-
 
 const initialState = {
   countryList: [],
@@ -54,13 +52,12 @@ const mainSlice = createSlice({
             city: item.LocalizedName,
             key: item.Key,
           };
-          if(country.country === "Israel"){
-            country.country = "Palistain"
-          };
-          if(country.city === "Jerusalem"){
-            country.city = "Ghaza"
+          if (country.country === 'Israel') {
+            country.country = 'Palistain';
           }
-            console.log(everyC)
+          if (country.city === 'Jerusalem') {
+            country.city = 'Ghaza';
+          }
           return everyC.push(country);
         });
 
@@ -71,40 +68,44 @@ const mainSlice = createSlice({
         state.isLoading = false;
         state.error = action.error.message;
       })
-      .addCase(getDetails.pending, (state,action) => {
+      .addCase(getDetails.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(getDetails.fulfilled, (state,action) => {
-        state.countryDetails = action.payload
+      .addCase(getDetails.fulfilled, (state, action) => {
+        state.countryDetails = action.payload;
         const Headline = {
-            Category: action.payload.Headline.Category,
-            EffectiveDate: action.payload.Headline.EffectiveDate,
-            EndDate: action.payload.Headline.EndDate,
+          Category: action.payload.Headline.Category,
+          EffectiveDate: action.payload.Headline.EffectiveDate,
+          EndDate: action.payload.Headline.EndDate,
         };
-        let num = 1
-        let DailyForecasts = []
-         action.payload.DailyForecasts.map((item) =>{
-            
-           let day = {};
-           day = {
+        let num = 1;
+        const DailyForecasts = [];
+        action.payload.DailyForecasts.map((item) => {
+          let day = {};
+          day = {
             Day: num,
             Date: item.Date,
             DayW: item.Day.IconPhrase,
             NightW: item.Night.IconPhrase,
-            Temperature: {Max:
-                 {Value: item.Temperature.Maximum.Value, 
-                    Unit: item.Temperature.Maximum.Unit}, 
-            Min: {Value: item.Temperature.Minimum.Value, 
-                Unit: item.Temperature.Minimum.Unit}},
+            Temperature: {
+              Max:
+                 {
+                   Value: item.Temperature.Maximum.Value,
+                   Unit: item.Temperature.Maximum.Unit,
+                 },
+              Min: {
+                Value: item.Temperature.Minimum.Value,
+                Unit: item.Temperature.Minimum.Unit,
+              },
+            },
 
-           } 
-           num += 1
-           DailyForecasts.push(day)
-        })
-        state.countryDetails = {Headline, DailyForecasts,KeyN}
-        state.isLoading = false
-        console.log(state.countryDetails)
-      })
+          };
+          num += 1;
+          return DailyForecasts.push(day);
+        });
+        state.countryDetails = { Headline, DailyForecasts, KeyN };
+        state.isLoading = false;
+      });
   },
 });
 
