@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import MainPage from '../components/mainpage';
-import store from '../redux/store';
+import store from '../Redux/store';
 
 describe('Component render testing', () => {
   it('Line page renders correctly', () => {
