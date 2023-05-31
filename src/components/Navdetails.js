@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
+
 const NavDetails = () => (
   <>
     <ul>
-      <li>Home</li>
+      <Link to="/"><li>Home</li></Link>
       <li>Mic</li>
       <li>Setting</li>
     </ul>
