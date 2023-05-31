@@ -1,14 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getDetails, getName } from '../Redux/Slices/mainpageSlice';
 import Nav from './Nav';
 
 const MainPage = () => {
   const dispatch = useDispatch();
-
-  
-
 
   const {
     countryList, isLoading, error,
@@ -25,7 +22,7 @@ const MainPage = () => {
 
   const displaycity = countryList.filter((country) => {
     const lowercaseName = country.city.toLowerCase();
-    const lowercaseCountry = country.country.toLowerCase()
+    const lowercaseCountry = country.country.toLowerCase();
     const lowercaseFinder = finder.toLowerCase();
     return lowercaseName.includes(lowercaseFinder) + lowercaseCountry.includes(lowercaseFinder);
   });
