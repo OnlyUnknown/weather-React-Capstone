@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component render testing Line page renders correctly 1`] = `
+<DocumentFragment>
+  <ul>
+    <li>
+      Home
+    </li>
+    <li>
+      Mic
+    </li>
+    <li>
+      Setting
+    </li>
+  </ul>
+  <div>
+    Loading
+  </div>
+</DocumentFragment>
+`;
