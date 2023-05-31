@@ -212,7 +212,7 @@ const Details = () => {
               );
             }
             return (
-              <div key="::::::::">{item.country}</div>
+              <div key="::::::::" />
             );
           })}
         </h2>
