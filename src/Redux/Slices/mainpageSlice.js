@@ -1,6 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+let KeyN;
+
 const url = 'http://dataservice.accuweather.com/locations/v1/topcities/50?apikey=pFhiQ1OqX6cHW7AkQqb8k9CLpPeIL1LX';
 
 export const getName = createAsyncThunk(
@@ -19,7 +21,8 @@ export const getDetails = createAsyncThunk(
   'Country/FetchDetails', async (key) => {
     try {
       const response = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=pFhiQ1OqX6cHW7AkQqb8k9CLpPeIL1LX`);
-      return response.data;
+        KeyN = key
+      return response.data
     } catch (err) {
       return err.message;
     }
@@ -51,7 +54,13 @@ const mainSlice = createSlice({
             city: item.LocalizedName,
             key: item.Key,
           };
-
+          if(country.country === "Israel"){
+            country.country = "Palistain"
+          };
+          if(country.city === "Jerusalem"){
+            country.city = "Ghaza"
+          }
+            console.log(everyC)
           return everyC.push(country);
         });
 
@@ -86,12 +95,13 @@ const mainSlice = createSlice({
                  {Value: item.Temperature.Maximum.Value, 
                     Unit: item.Temperature.Maximum.Unit}, 
             Min: {Value: item.Temperature.Minimum.Value, 
-                Unit: item.Temperature.Minimum.Unit}}
+                Unit: item.Temperature.Minimum.Unit}},
+
            } 
            num += 1
            DailyForecasts.push(day)
         })
-        state.countryDetails = {Headline, DailyForecasts}
+        state.countryDetails = {Headline, DailyForecasts,KeyN}
         state.isLoading = false
         console.log(state.countryDetails)
       })
