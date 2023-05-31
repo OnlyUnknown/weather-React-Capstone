@@ -26,7 +26,7 @@ const MainPage = () => {
       <div>
         <Nav />
         {countryList.map((item) => (
-          <Link to={"/details/"+ item.country + "/" + item.city  } key={item.key}>
+          <Link to={`/details/${item.country}/${item.city}`} key={item.key}>
             <div role="button" onClick={() => { dispatch(getDetails(item.key)); }} onKeyDown="" tabIndex={0}>
               {(() => {
                 if (item.country === 'Iraq') {

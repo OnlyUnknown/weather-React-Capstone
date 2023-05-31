@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import CloudySun from '../PNG/danieledesantis-weather-icons-cloudy.png';
 import Sunny from '../PNG/danieledesantis-weather-icons-sunny.png';
 import MostlyCloudy from '../PNG/danieledesantis-weather-icons-cloudy-3.png';
@@ -21,6 +22,7 @@ const NavDetails = () => (
       <li>Setting</li>
     </ul>
   </>
+
 );
 const Details = () => {
   const {
@@ -345,8 +347,7 @@ const Details = () => {
       </>
     );
   }
+  return <div>error</div>;
 };
-
-
 
 export default Details;
