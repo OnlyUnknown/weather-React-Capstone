@@ -51,7 +51,7 @@ const Details = () => {
                       return (
                         <img className="Flag" src="https://flagicons.lipis.dev/flags/4x3/bd.svg" alt={item.country} />
                       );
-                    } if (item.country === 'Democratic Republic of the Congo') {
+                    } if (item.country === 'DRC') {
                       return (
                         <img className="Flag" src="https://flagicons.lipis.dev/flags/4x3/cd.svg" alt={item.country} />
                       );

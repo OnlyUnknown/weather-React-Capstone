@@ -39,15 +39,20 @@ const MainPage = () => {
     return (
       <div>
         <Nav />
+        <div className='Search-Background'>
+          <div className='search-barH'>
         <input
           type="text"
           className="search-bar"
           placeholder="search city name or country name"
           onChange={handleSearch}
         />
+        </div>
+        </div >
+        <div className='grid-Country'>
         {displaycity.map((item) => (
           <Link to={`/details/${item.country}/${item.city}`} key={item.key}>
-            <div role="button" onClick={() => { dispatch(getDetails(item.key)); }} onKeyDown="" tabIndex={0}>
+            <div className='countryC' role="button" onClick={() => { dispatch(getDetails(item.key)); }} onKeyDown="" tabIndex={0}>
               {(() => {
                 if (item.country === 'Iraq') {
                   return (
@@ -57,7 +62,7 @@ const MainPage = () => {
                   return (
                     <img className="Flag" src="https://flagicons.lipis.dev/flags/4x3/bd.svg" alt={item.country} />
                   );
-                } if (item.country === 'Democratic Republic of the Congo') {
+                } if (item.country === 'DRC') {
                   return (
                     <img className="Flag" src="https://flagicons.lipis.dev/flags/4x3/cd.svg" alt={item.country} />
                   );
@@ -222,17 +227,16 @@ const MainPage = () => {
                   <img className="Flag" src="https://flagicons.lipis.dev/flags/4x3/ps.svg" alt={item.country} />
                 );
               })()}
-              <div>
+              <div className='CountryN'>
                 {item.country}
-                /
+                </div>
+                <div className='CityN'>
                 {item.city}
-              </div>
-              <div>
-                {item.key}
               </div>
             </div>
           </Link>
         ))}
+        </div>
       </div>
     );
   }

@@ -39,7 +39,9 @@
 }
 
 .Flag {
-  width: 75px;
+  width: 85px;
+  margin-left: 3px;
+  margin-top: 3px;
 }
 
 .Nav-icon{
@@ -78,4 +80,56 @@ body {
   font-size: large;
   margin-left: auto;
   margin-right: auto;
+}
+
+.Search-Background {
+  height: 200px;
+  background-position: cover;
+  background-image: url("https://images.ctfassets.net/4ivszygz9914/2282b0b8-4bf4-4c3e-8606-e6a44b8afd5e/5f6eb05510ec1df10239d4db0bf1d0d3/9334400d-90eb-4fb0-9ada-06df9a08862a.jpeg?fm=webp");
+}
+
+.search-bar{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+display:grid;
+justify-content: center;
+}
+
+.search-barH {
+  margin-left: auto;
+  margin-right: auto;
+
+display:grid;
+justify-content: center;
+
+}
+
+.grid-Country{
+  display: grid;
+  grid-template-areas: "a a";
+}
+
+.countryC{
+  border:#282c34 solid 1px;
+  height: 160px;
+  font-size: large;
+}
+
+.CountryN{
+  text-align: end;
+  color: #282c346a;  
+ font-size: 20px;
+ margin-right: 7px;
+}
+
+.CityN{
+  text-align: end;
+  color: rgb(6, 103, 103);
+  font-size: 25px;
+  margin-right: 7px;
+}
+
+a {
+  text-decoration: none;
 }
