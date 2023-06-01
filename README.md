@@ -156,7 +156,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [x] **[I will Add API more details for every contry]**
+- [x] **[I will Add more API details for every contry]**
 
 <!-- CONTRIBUTING -->
 
