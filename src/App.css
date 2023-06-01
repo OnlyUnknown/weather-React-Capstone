@@ -133,3 +133,52 @@ justify-content: center;
 a {
   text-decoration: none;
 }
+
+.FlagD{
+  margin-left: 20px;
+  width: 200px;
+}
+
+.countryDC{
+  margin-top: -20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url("https://i.ytimg.com/vi/n2ZfESR-WBs/maxresdefault.jpg");
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.countryND{
+  margin-top: 80px;
+  margin-right: 80px;
+}
+
+.dailyHeader{
+  color: aliceblue;
+  text-align: center;
+  background-color: #293554;
+}
+
+.dailyForcastC{
+  flex-wrap: nowrap;
+  display: flex;
+  border-bottom: black 1px solid ;
+  height: 150px;
+}
+
+.dailyForcastC div {
+  font-size: 20px;
+  width: 160px;
+  
+}
+
+.dailyForcastC:nth-child(even){
+  background-color: #3d7af3;
+}
+
+.space-between{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
