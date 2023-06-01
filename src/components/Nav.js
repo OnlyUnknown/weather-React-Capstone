@@ -1,11 +1,12 @@
 const Nav = () => (
-  <>
-    <ul>
-      <li>Home</li>
-      <li>Mic</li>
-      <li>Setting</li>
+  <div className="background-Nav">
+    <ul className="Nav-icon">
+      <li><img className="sizeI" src="https://cdn-icons-png.flaticon.com/512/7133/7133312.png"/></li>
+      <li className="center">Top 50 cities Daily Forecasts</li>
+      <li className="Left"><img className="sizeI" src="https://cdn-icons-png.flaticon.com/512/1082/1082810.png"/></li>
+      <li className="right"><img className="sizeI" src="https://cdn-icons-png.flaticon.com/512/126/126472.png"/></li>
     </ul>
-  </>
+  </div>
 );
 
 export default Nav;

@@ -41,3 +41,41 @@
 .Flag {
   width: 75px;
 }
+
+.Nav-icon{
+display: flex;
+flex-direction: row;
+list-style-type: none;
+
+}
+
+.sizeI {
+ width: 30px;
+}
+
+.Left{
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.right{
+  margin-right: 20px;
+}
+
+body {
+  background-color: #618dfb;
+}
+
+.background-Nav{
+  padding-top: 5px;
+  padding-bottom: 2px;
+  background-color: #61c2fb;
+}
+
+.center {
+  color: antiquewhite;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: large;
+  margin-left: auto;
+  margin-right: auto;
+}
