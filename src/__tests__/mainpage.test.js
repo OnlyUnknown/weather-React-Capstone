@@ -5,7 +5,7 @@ import MainPage from '../components/mainpage';
 import store from '../Redux/store';
 
 describe('Component render testing', () => {
-  it('Line page renders correctly', () => {
+  it('MainPage page renders correctly', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <MainPage />
@@ -15,8 +15,8 @@ describe('Component render testing', () => {
   });
 });
 
-describe('<Home />', () => {
-  it('Line page renders correctly', () => {
+describe('<MainPage />', () => {
+  it('Main page renders correctly', () => {
     // eslint-disable-next-line
     const { asFragment } = render(
       <Provider store={store}>
@@ -34,7 +34,7 @@ describe('<Home />', () => {
     expect(searched).toBe('Test 2');
   });
 });
-it('Line page renders correctly', () => {
+it('Main page renders correctly', () => {
   // eslint-disable-next-line
   const { asFragment } = render(
     <Provider store={store}>
@@ -49,7 +49,7 @@ it('Line page renders correctly', () => {
   const searched = mockData[0].country;
   expect(searched).toBe('Test 1');
 });
-it('Line page renders correctly', () => {
+it('Main page renders correctly', () => {
   // eslint-disable-next-line
   const { asFragment } = render(
     <Provider store={store}>
