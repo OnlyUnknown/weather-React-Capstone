@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/weather-react-capstone/static/css/main.b4bd2656.css",
+    "main.js": "/weather-react-capstone/static/js/main.f321e2d2.js",
+    "index.html": "/weather-react-capstone/index.html",
+    "main.b4bd2656.css.map": "/weather-react-capstone/static/css/main.b4bd2656.css.map",
+    "main.f321e2d2.js.map": "/weather-react-capstone/static/js/main.f321e2d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4bd2656.css",
+    "static/js/main.f321e2d2.js"
+  ]
+}
