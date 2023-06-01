@@ -86,7 +86,17 @@ body {
   background-image: url("https://images.ctfassets.net/4ivszygz9914/2282b0b8-4bf4-4c3e-8606-e6a44b8afd5e/5f6eb05510ec1df10239d4db0bf1d0d3/9334400d-90eb-4fb0-9ada-06df9a08862a.jpeg?fm=webp");
 }
 
+.search-bar::placeholder {
+  color: aliceblue;
+}
+
 .search-bar {
+  padding: 10px;
+  color: white;
+  background-color: #3d7af3;
+  font-size: large;
+  width: auto;
+  border-radius: 15%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
