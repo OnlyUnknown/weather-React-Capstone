@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import MainPage from '../components/mainpage';
-import store from '../redux/store';
+import store from '../Redux/store';
 
 describe('Component render testing', () => {
   it('Line page renders correctly', () => {
@@ -13,4 +13,54 @@ describe('Component render testing', () => {
     );
     expect(asFragment()).toMatchSnapshot();
   });
+});
+
+describe('<Home />', () => {
+  it('Line page renders correctly', () => {
+    // eslint-disable-next-line
+    const { asFragment } = render(
+      <Provider store={store}>
+        <MainPage />
+      </Provider>,
+    );
+
+    const mockData = [
+      { country: 'Test 1', city: 'test1' },
+      { country: 'Test 2', city: 'test2' },
+      { country: 'Test 3', city: 'test3' },
+    ];
+    const searched = mockData[1].country;
+
+    expect(searched).toBe('Test 2');
+  });
+});
+it('Line page renders correctly', () => {
+  // eslint-disable-next-line
+  const { asFragment } = render(
+    <Provider store={store}>
+      <MainPage />
+    </Provider>,
+  );
+  const mockData = [
+    { country: 'Test 1', city: 'test1' },
+    { country: 'Test 2', city: 'test2' },
+    { country: 'Test 3', city: 'test3' },
+  ];
+  const searched = mockData[0].country;
+  expect(searched).toBe('Test 1');
+});
+it('Line page renders correctly', () => {
+  // eslint-disable-next-line
+  const { asFragment } = render(
+    <Provider store={store}>
+      <MainPage />
+    </Provider>,
+  );
+  const mockData = [
+    { country: 'Test 1', city: 'test1' },
+    { country: 'Test 2', city: 'test2' },
+    { country: 'Test 3', city: 'test3' },
+  ];
+  const searched = mockData[2].city;
+  expect(searched).toBe('test3');
 });

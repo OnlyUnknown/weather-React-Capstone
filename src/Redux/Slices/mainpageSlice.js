@@ -3,7 +3,7 @@ import axios from 'axios';
 
 let KeyN;
 
-const url = 'http://dataservice.accuweather.com/locations/v1/topcities/50?apikey=pFhiQ1OqX6cHW7AkQqb8k9CLpPeIL1LX';
+const url = 'http://dataservice.accuweather.com/locations/v1/topcities/50?apikey=qXKbERgdq5RwscImthcwtyCsEoCzLQAW';
 
 export const getName = createAsyncThunk(
   'Country/FetchCountry', async () => {
@@ -19,7 +19,7 @@ export const getName = createAsyncThunk(
 export const getDetails = createAsyncThunk(
   'Country/FetchDetails', async (key) => {
     try {
-      const response = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=pFhiQ1OqX6cHW7AkQqb8k9CLpPeIL1LX`);
+      const response = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=qXKbERgdq5RwscImthcwtyCsEoCzLQAW`);
       KeyN = key;
       return response.data;
     } catch (err) {

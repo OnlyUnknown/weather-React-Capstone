@@ -1,17 +1,31 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getDetails, getName } from '../Redux/Slices/mainpageSlice';
 import Nav from './Nav';
 
 const MainPage = () => {
   const dispatch = useDispatch();
+
   const {
     countryList, isLoading, error,
   } = useSelector((store) => store.main);
   useEffect(() => {
     dispatch(getName());
   }, [dispatch]);
+
+  const [finder, setFinder] = useState('');
+
+  const handleSearch = (e) => {
+    setFinder(e.target.value);
+  };
+
+  const displaycity = countryList.filter((country) => {
+    const lowercaseName = country.city.toLowerCase();
+    const lowercaseCountry = country.country.toLowerCase();
+    const lowercaseFinder = finder.toLowerCase();
+    return lowercaseName.includes(lowercaseFinder) + lowercaseCountry.includes(lowercaseFinder);
+  });
 
   if (isLoading === true) {
     return (
@@ -25,7 +39,13 @@ const MainPage = () => {
     return (
       <div>
         <Nav />
-        {countryList.map((item) => (
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="search city name or country name"
+          onChange={handleSearch}
+        />
+        {displaycity.map((item) => (
           <Link to={`/details/${item.country}/${item.city}`} key={item.key}>
             <div role="button" onClick={() => { dispatch(getDetails(item.key)); }} onKeyDown="" tabIndex={0}>
               {(() => {
