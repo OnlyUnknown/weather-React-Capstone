@@ -17,13 +17,12 @@ import RainN from '../PNG/danieledesantis-weather-icons-night-rainy.png';
 const NavDetails = () => (
   <div className="background-Nav">
     <ul className="Nav-icon">
-      <Link to="/"><li><img className="sizeI" src="https://cdn-icons-png.flaticon.com/512/7133/7133312.png"/></li></Link>
+      <Link to="/"><li><img alt="HomePage" className="sizeI" src="https://cdn-icons-png.flaticon.com/512/7133/7133312.png" /></li></Link>
       <li className="center">Daily Forecasts</li>
-      <li className="Left"><img className="sizeI" src="https://cdn-icons-png.flaticon.com/512/1082/1082810.png"/></li>
-      <li className="right"><img className="sizeI" src="https://cdn-icons-png.flaticon.com/512/126/126472.png"/></li>
+      <li className="Left"><img alt="Mic" className="sizeI" src="https://cdn-icons-png.flaticon.com/512/1082/1082810.png" /></li>
+      <li className="right"><img alt="Setting" className="sizeI" src="https://cdn-icons-png.flaticon.com/512/126/126472.png" /></li>
     </ul>
   </div>
-
 
 );
 const Details = () => {
@@ -32,11 +31,12 @@ const Details = () => {
   } = useSelector((store) => store.main);
 
   if (isLoading === true) {
-    
-    return <>
-    <NavDetails/>
-    <div>Loading</div>
-    </>;
+    return (
+      <>
+        <NavDetails />
+        <div>Loading</div>
+      </>
+    );
   }
   if (isLoading === false) {
     return (
@@ -46,7 +46,7 @@ const Details = () => {
           {countryList.map((item) => {
             if (item.key === countryDetails.KeyN) {
               return (
-                <div className='countryDC' key={item.key}>
+                <div className="countryDC" key={item.key}>
 
                   {(() => {
                     if (item.country === 'Iraq') {
@@ -222,7 +222,7 @@ const Details = () => {
                       <img className="FlagD" src="https://flagicons.lipis.dev/flags/4x3/ps.svg" alt={item.country} />
                     );
                   })()}
-                  <div className='countryND'>
+                  <div className="countryND">
                     <div>{item.country}</div>
                     <div>{item.city}</div>
                   </div>
@@ -234,122 +234,121 @@ const Details = () => {
             );
           })}
         </h2>
-        <h3 className='dailyHeader'>Daily Forecasts</h3>
+        <h3 className="dailyHeader">Daily Forecasts</h3>
         <div>
 
           {countryDetails.DailyForecasts.map((item) => (
-            <div className='dailyForcastC' key={KeyN}>
+            <div className="dailyForcastC" key={KeyN}>
               <div>
                 <h5>Date:</h5>
                 {item.Date}
               </div>
-              <div className='space-between'>
-              <div>
-                Day Time:
-                {item.DayW}
-              </div>
-              
+              <div className="space-between">
+                <div>
+                  Day Time:
+                  {item.DayW}
+                </div>
 
-              {(() => {
-                if (item.DayW === 'Intermittent clouds' || item.DayW === 'Partly sunny') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={CloudySun} />
-                  );
-                } if (item.DayW === 'Mostly sunny'
+                {(() => {
+                  if (item.DayW === 'Intermittent clouds' || item.DayW === 'Partly sunny') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={CloudySun} />
+                    );
+                  } if (item.DayW === 'Mostly sunny'
                 || item.DayW === 'Sunny' || item.DayW === 'Hot'
               || item.DayW === 'Hazy sunshine') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={Sunny} />
+                    );
+                  } if (item.DayW === 'Mostly cloudy') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={MostlyCloudy} />
+                    );
+                  } if (
+                    item.DayW === 'Showers' || item.DayW === 'Partly sunny w/ showers' || item.DayW === 'Mostly cloudy w/ showers' || item.DayW === 'Dreary') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={Showers} />
+                    );
+                  } if (item.DayW === 'Cloudy') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={Cloudy} />
+                    );
+                  } if (item.DayW === 'Partly sunny w/ t-storms' || item.DayW === 'Thunderstorms' || item.DayW === 'Mostly cloudy w/ t-storms') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={ThunderStorm} />
+                    );
+                  } if (item.DayW === 'Rain') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={Rain} />
+                    );
+                  }
                   return (
-                    <img className="DayIcon" alt={item.NightW} src={Sunny} />
+                    <div>
+                      {' '}
+                      {item.NightW}
+                    </div>
                   );
-                } if (item.DayW === 'Mostly cloudy') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={MostlyCloudy} />
-                  );
-                } if (
-                  item.DayW === 'Showers' || item.DayW === 'Partly sunny w/ showers' || item.DayW === 'Mostly cloudy w/ showers' || item.DayW === 'Dreary') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={Showers} />
-                  );
-                } if (item.DayW === 'Cloudy') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={Cloudy} />
-                  );
-                } if (item.DayW === 'Partly sunny w/ t-storms' || item.DayW === 'Thunderstorms' || item.DayW === 'Mostly cloudy w/ t-storms') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={ThunderStorm} />
-                  );
-                } if (item.DayW === 'Rain') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={Rain} />
-                  );
-                }
-                return (
-                  <div>
-                    {' '}
-                    {item.NightW}
-                  </div>
-                );
-              })()}
+                })()}
               </div>
-              <div className='space-between'> 
-              <div>
-                Night Time:
-                {item.NightW}
-              </div>
-              {(() => {
-                if (item.NightW === 'Intermittent clouds' || item.NightW === 'Partly cloudy') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={CloudyN} />
-                  );
-                } if (item.NightW === 'Clear'
+              <div className="space-between">
+                <div>
+                  Night Time:
+                  {item.NightW}
+                </div>
+                {(() => {
+                  if (item.NightW === 'Intermittent clouds' || item.NightW === 'Partly cloudy') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={CloudyN} />
+                    );
+                  } if (item.NightW === 'Clear'
           || item.NightW === 'Clear' || item.NightW === 'Mostly clear') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={ClearN} />
-                  );
-                } if (item.NightW === 'Mostly cloudy w/ showers'
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={ClearN} />
+                    );
+                  } if (item.NightW === 'Mostly cloudy w/ showers'
               || item.NightW === 'Showers' || item.NightW === 'Partly cloudy w/ showers') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={ShowersN} />
+                    );
+                  } if (
+                    item.NightW === 'Showers' || item.NightW === 'Partly sunny w/ showers' || item.NightW === 'Mostly cloudy w/ showers') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={Showers} />
+                    );
+                  } if (item.NightW === 'Cloudy' || item.NightW === 'Mostly cloudy') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={CloudsN} />
+                    );
+                  } if (item.NightW === 'Partly cloudy w/ t-storms' || item.NightW === 'Thunderstorms' || item.NightW === 'Mostly cloudy w/ t-storms') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={ThunderStormN} />
+                    );
+                  } if (item.NightW === 'Rain') {
+                    return (
+                      <img className="DayIcon" alt={item.NightW} src={RainN} />
+                    );
+                  }
                   return (
-                    <img className="DayIcon" alt={item.NightW} src={ShowersN} />
+                    <div>{item.NightW}</div>
                   );
-                } if (
-                  item.NightW === 'Showers' || item.NightW === 'Partly sunny w/ showers' || item.NightW === 'Mostly cloudy w/ showers') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={Showers} />
-                  );
-                } if (item.NightW === 'Cloudy' || item.NightW === 'Mostly cloudy') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={CloudsN} />
-                  );
-                } if (item.NightW === 'Partly cloudy w/ t-storms' || item.NightW === 'Thunderstorms' || item.NightW === 'Mostly cloudy w/ t-storms') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={ThunderStormN} />
-                  );
-                } if (item.NightW === 'Rain') {
-                  return (
-                    <img className="DayIcon" alt={item.NightW} src={RainN} />
-                  );
-                }
-                return (
-                  <div>{item.NightW}</div>
-                );
-              })()}
+                })()}
               </div>
-              <div> 
-              <h5>Temperature:</h5>
               <div>
+                <h5>Temperature:</h5>
                 <div>
-                Max:
-                {item.Temperature.Max.Value}
-                /
-                {item.Temperature.Max.Unit}
+                  <div>
+                    Max:
+                    {item.Temperature.Max.Value}
+                    /
+                    {item.Temperature.Max.Unit}
+                  </div>
+                  <div>
+                    Min:
+                    {item.Temperature.Min.Value}
+                    /
+                    {item.Temperature.Min.Unit}
+                  </div>
                 </div>
-                <div>
-                Min:
-                {item.Temperature.Min.Value}
-                /
-                {item.Temperature.Min.Unit}
-                </div>
-              </div>
               </div>
             </div>
 

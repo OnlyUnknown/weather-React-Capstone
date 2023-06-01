@@ -58,8 +58,8 @@ const mainSlice = createSlice({
           if (country.city === 'Jerusalem') {
             country.city = 'Ghaza';
           }
-          if(country.country === "Democratic Republic of the Congo"){
-             country.country = "DRC"
+          if (country.country === 'Democratic Republic of the Congo') {
+            country.country = 'DRC';
           }
           return everyC.push(country);
         });

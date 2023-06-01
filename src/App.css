@@ -44,23 +44,22 @@
   margin-top: 3px;
 }
 
-.Nav-icon{
-display: flex;
-flex-direction: row;
-list-style-type: none;
-
+.Nav-icon {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
 }
 
 .sizeI {
- width: 30px;
+  width: 30px;
 }
 
-.Left{
+.Left {
   margin-left: auto;
   margin-right: 20px;
 }
 
-.right{
+.right {
   margin-right: 20px;
 }
 
@@ -68,7 +67,7 @@ body {
   background-color: #618dfb;
 }
 
-.background-Nav{
+.background-Nav {
   padding-top: 5px;
   padding-bottom: 2px;
   background-color: #61c2fb;
@@ -84,46 +83,43 @@ body {
 
 .Search-Background {
   height: 200px;
-  background-position: cover;
   background-image: url("https://images.ctfassets.net/4ivszygz9914/2282b0b8-4bf4-4c3e-8606-e6a44b8afd5e/5f6eb05510ec1df10239d4db0bf1d0d3/9334400d-90eb-4fb0-9ada-06df9a08862a.jpeg?fm=webp");
 }
 
-.search-bar{
+.search-bar {
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
-display:grid;
-justify-content: center;
+  display: grid;
+  justify-content: center;
 }
 
 .search-barH {
   margin-left: auto;
   margin-right: auto;
-
-display:grid;
-justify-content: center;
-
+  display: grid;
+  justify-content: center;
 }
 
-.grid-Country{
+.grid-Country {
   display: grid;
   grid-template-areas: "a a";
 }
 
-.countryC{
-  border:#282c34 solid 1px;
+.countryC {
+  border: #282c34 solid 1px;
   height: 160px;
   font-size: large;
 }
 
-.CountryN{
+.CountryN {
   text-align: end;
-  color: #282c34;  
- font-size: 20px;
- margin-right: 7px;
+  color: #282c34;
+  font-size: 20px;
+  margin-right: 7px;
 }
 
-.CityN{
+.CityN {
   text-align: end;
   color: rgb(5, 75, 75);
   font-size: 25px;
@@ -134,12 +130,12 @@ a {
   text-decoration: none;
 }
 
-.FlagD{
+.FlagD {
   margin-left: 20px;
   width: 200px;
 }
 
-.countryDC{
+.countryDC {
   margin-top: -20px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -149,35 +145,34 @@ a {
   flex-direction: row;
 }
 
-.countryND{
+.countryND {
   margin-top: 80px;
   margin-right: 80px;
 }
 
-.dailyHeader{
+.dailyHeader {
   color: aliceblue;
   text-align: center;
   background-color: #293554;
 }
 
-.dailyForcastC{
+.dailyForcastC {
   flex-wrap: nowrap;
   display: flex;
-  border-bottom: black 1px solid ;
+  border-bottom: black 1px solid;
   height: 150px;
 }
 
 .dailyForcastC div {
   font-size: 20px;
   width: 160px;
-  
 }
 
-.dailyForcastC:nth-child(even){
+.dailyForcastC:nth-child(even) {
   background-color: #3d7af3;
 }
 
-.space-between{
+.space-between {
   display: flex;
   flex-direction: column;
   align-items: center;
