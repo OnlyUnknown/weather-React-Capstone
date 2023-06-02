@@ -131,16 +131,17 @@ a {
 }
 
 .dailyForcastC {
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   display: flex;
   border-bottom: black 1px solid;
-  height: 150px;
+  height: auto;
 }
 
 .dailyForcastC div {
+  
   margin-left: 5px;
   font-size: 16px;
-  width: 160px;
+  width: 170px;
 }
 
 .dailyForcastC:nth-child(even) {
@@ -148,10 +149,18 @@ a {
 }
 
 .space-between {
-  border-left: #282c34 solid 1px;
+  
+  border-top: #282c34 solid 1px; ;
+
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 3px;
+}
+
+.space-between:nth-child(even){
+  border-left: #282c34 solid 1px;
 }
 
 .dateH {

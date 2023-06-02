@@ -245,6 +245,23 @@ const Details = () => {
                 <br />
                 {item.time}
               </div>
+              <div>
+                <h5>Temperature:</h5>
+                <div>
+                  <div>
+                    Max:
+                    {item.Temperature.Max.Value}
+                    /
+                    {item.Temperature.Max.Unit}
+                  </div>
+                  <div>
+                    Min:
+                    {item.Temperature.Min.Value}
+                    /
+                    {item.Temperature.Min.Unit}
+                  </div>
+                </div>
+              </div>
               <div className="space-between">
                 <div className="DayWord">
                   Day Time:
@@ -334,23 +351,6 @@ const Details = () => {
                     <div>{item.NightW}</div>
                   );
                 })()}
-              </div>
-              <div>
-                <h5>Temperature:</h5>
-                <div>
-                  <div>
-                    Max:
-                    {item.Temperature.Max.Value}
-                    /
-                    {item.Temperature.Max.Unit}
-                  </div>
-                  <div>
-                    Min:
-                    {item.Temperature.Min.Value}
-                    /
-                    {item.Temperature.Min.Unit}
-                  </div>
-                </div>
               </div>
             </div>
 
