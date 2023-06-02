@@ -100,7 +100,7 @@ from different APIs from the same API provider
 ## 🚀 Live Demo 
 <a href="https://weather-website-z9by.onrender.com/">Live Link</a>
 
-<a href="https://www.loom.com/share/68e57c7a969147978a2f80e2dbae0d37">Recording demo</a>
+<a href="https://www.loom.com/share/5ec7620323e0428d9067338a9dc9a2ef">Recording demo</a>
 
 <!-- GETTING STARTED -->
 
