@@ -166,3 +166,16 @@ a {
 .dateH {
   font-size: small;
 }
+
+.arrowspan{
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: auto;
+  width: 20px;
+}
+
+.FlagArrowC{
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-start;
+}
