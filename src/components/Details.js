@@ -239,14 +239,14 @@ const Details = () => {
 
           {countryDetails.DailyForecasts.map((item) => (
             <div className="dailyForcastC" key={KeyN}>
-              <div className='dateH'>
+              <div className="dateH">
                 <h5>Date:</h5>
                 {item.Date}
-                <br/>
+                <br />
                 {item.time}
               </div>
               <div className="space-between">
-                <div className='DayWord'>
+                <div className="DayWord">
                   Day Time:
                   {item.DayW}
                 </div>
@@ -293,7 +293,7 @@ const Details = () => {
                 })()}
               </div>
               <div className="space-between">
-                <div className='DayWord'>
+                <div className="DayWord">
                   Night Time:
                   {item.NightW}
                 </div>
