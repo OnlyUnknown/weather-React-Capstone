@@ -87,7 +87,8 @@ const mainSlice = createSlice({
           let day = {};
           day = {
             Day: num,
-            Date: item.Date,
+            Date: item.Date.slice(0, 10),
+            time: item.Date.slice(11),
             DayW: item.Day.IconPhrase,
             NightW: item.Night.IconPhrase,
             Temperature: {
