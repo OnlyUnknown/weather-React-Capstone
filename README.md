@@ -83,7 +83,7 @@ After you're finished please remove all the comments and instructions!
 ## 🚀 Live Demo 
 <a href="https://weather-website-z9by.onrender.com/">Live Link</a>
 
-## Live Recording demo <a href="">Recording demo</a>
+<a href="">Recording demo</a>
 
 <!-- GETTING STARTED -->
 
