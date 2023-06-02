@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component render testing Details page renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="background-Nav"
+  >
+    <ul
+      class="Nav-icon"
+    >
+      <a
+        href="/"
+      >
+        <li>
+          <img
+            alt="HomePage"
+            class="sizeI"
+            src="https://cdn-icons-png.flaticon.com/512/7133/7133312.png"
+          />
+        </li>
+      </a>
+      <li
+        class="center"
+      >
+        Daily Forecasts
+      </li>
+      <li
+        class="Left"
+      >
+        <img
+          alt="Mic"
+          class="sizeI"
+          src="https://cdn-icons-png.flaticon.com/512/1082/1082810.png"
+        />
+      </li>
+      <li
+        class="right"
+      >
+        <img
+          alt="Setting"
+          class="sizeI"
+          src="https://cdn-icons-png.flaticon.com/512/126/126472.png"
+        />
+      </li>
+    </ul>
+  </div>
+  <div>
+    Loading
+  </div>
+</DocumentFragment>
+`;

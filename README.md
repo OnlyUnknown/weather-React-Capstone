@@ -1,70 +1,207 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!--
+HOW TO USE:
+This is an example of how you may give instructions on setting up your project locally.
 
-## Available Scripts
+Modify this file to match your project and remove sections that don't apply.
 
-In the project directory, you can run:
+REQUIRED SECTIONS:
+- Table of Contents
+- About the Project
+  - Built With
+  - Live Demo
+- Getting Started
+- Authors
+- Future Features
+- Contributing
+- Show your support
+- Acknowledgements
+- License
 
-### `npm start`
+OPTIONAL SECTIONS:
+- FAQ
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+After you're finished please remove all the comments and instructions!
+-->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<div align="center">
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <img/>
+  <br/>
 
-### `npm test`
+  <h3><b>Read me</b></h3>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</div>
 
-### `npm run build`
+<!-- TABLE OF CONTENTS -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 📗 Table of Contents
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
+- [📝 License](#license)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<div align="center"><h1>REACT CAPSTONE</h1></div>
 
-### `npm run eject`
+<!-- PROJECT DESCRIPTION -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 📖 React Capstone
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This is a capstone project that uses React and Redux technologies. The website provides detailed 
+information about specific countries that come from an API and daily forecasts
+from different APIs from the same API provider
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠 Built With <a name="built-with"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- HTML
+- CSS
+- JS
+- React
+- Redux
 
-## Learn More
+### Tech Stack <a name="tech-stack"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> I Used Gitflow, modules, and advanced React, Redux & JS (ES6) in this Capstone Project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<details>
+  <summary>HTML</summary>
+  <ul>
+    <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+     <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+     <li><a href="https://www.w3schools.com/css/">Javascript</a></li>
+  </ul>
+</details>
 
-### Code Splitting
+<!-- Features -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Key Features <a name="key-features"></a>
 
-### Analyzing the Bundle Size
+- **[React, Redux, Css]**
+- **[Styling css with colors, borders, paddings, margins & sizes, etc]**
+  \_ **[React, Redux & javascript functions, modules, ES6 syntax, variables, React testing, etc]**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Live Demo 
+<a href="https://weather-website-z9by.onrender.com/">Live Link</a>
 
-### Making a Progressive Web App
+<a href="https://www.loom.com/share/5ec7620323e0428d9067338a9dc9a2ef">Recording demo</a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- GETTING STARTED -->
 
-### Advanced Configuration
+## 💻 Getting Started <a name="getting-started"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To get a local copy up and running, follow these steps.
 
+### Prerequisites
+
+In order to run this project you need the following tools:
+
+- Node.js in your computer
+- IDE(e.g.: Vscode,...)
+- Terminal
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  cd your-prefered-folder
+
+  git clone https://github.com/KAYEMBAJONATHAN/React-Capstone.git
+```
+
+### Install
+
+- Install this project with:
+
+```sh
+  cd react-redux-capstone
+
+  npm install or npm i
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  npm start
+
+```
+
+### Usage
+
+_Run the project on Visual Studio Code Live Server._
+
+<!--
+Example command:
+
+```sh
+  rails server
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can deploy this project using:
+Not Yet
+<!--
+Example:
 
-### `npm run build` fails to minify
+```sh
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+ -->
+
+# <a name="authors">Ndonyi Maurice</a>
+
+👤 **Abdullah AL-Khureif**
+
+- GitHub: [@Abdullah AL-Khureif](https://github.com/OnlyUnknown)
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [x] **[I will Add more API details for every contry]**
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## ⭐️ Show your support <a name="support"></a>
+
+> If you like this project feel comfortable to endorse the authors. Give a star in github repository.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> I would like to thanks and give appropriate credit to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) the [author of the original design](<https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)>), for the design inspiration as required by the [Creative Commons License](https://creativecommons.org/licenses/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="License"></a>
+
+> This project has [MIT](./MIT.md)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
