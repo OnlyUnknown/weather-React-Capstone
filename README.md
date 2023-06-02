@@ -48,8 +48,8 @@ After you're finished please remove all the comments and instructions!
 # 📖 React Capstone
 
 This is a capstone project that uses React and Redux technologies. The website provides detailed 
-information about the about specific countries that come from an api and and daily forcasts
-from different api from the same api provider
+information about specific countries that come from an API and daily forecasts
+from different APIs from the same API provider
 
 ## 🛠 Built With <a name="built-with"></a>
 
