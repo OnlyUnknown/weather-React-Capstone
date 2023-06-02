@@ -80,9 +80,10 @@ After you're finished please remove all the comments and instructions!
 - **[Styling css with colors, borders, paddings, margins & sizes, etc]**
   \_ **[React, Redux & javascript functions, modules, ES6 syntax, variables, React testing, etc]**
 
-## 🚀 Live Demo <a href="">Live Link</a>
+## 🚀 Live Demo 
+<a href="https://weather-website-z9by.onrender.com/">Live Link</a>
 
-## Live Recording demo <a href="">Recording demo</a>
+<a href="">Recording demo</a>
 
 <!-- GETTING STARTED -->
 
